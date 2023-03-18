@@ -15,6 +15,7 @@ class CreateTransporteTabla extends Migration
     {
         Schema::create('transporte_tabla', function (Blueprint $table) {
             $table->id();
+
             $table-> string('codigo', 75);
             $table-> string('nombre', 120);
             $table-> string('razon_social',250);
