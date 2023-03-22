@@ -14,10 +14,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // User::factory(10)->create();
-        $proveedor = new proveedor(); //objeto y y atributos de la clase.
-        $proveedor->codigo='ABC1234';
-        $proveedor->nombre='Proveedor';
-        $proveedor->razon_social='Razon_publica';
+        $this->call(CamionSeeder::class);
+        $proveedor = new proveedo(); //objeto y y atributos de la clase.
+        $proveedor->id='45879858';
+        $proveedor->nombre='toledo';
+        $proveedor->razon_social='camiones';
         $proveedor->save();
 
     }

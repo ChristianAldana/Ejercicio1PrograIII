@@ -13,14 +13,11 @@ class CreateTransporteTabla extends Migration
      */
     public function up()
     {
-        Schema::create('transporte_tabla', function (Blueprint $table) {
+        Schema::create('transporte', function (Blueprint $table) {
             $table->id();
-
-            $table-> string('codigo', 75);
-            $table-> string('nombre', 120);
-            $table-> string('razon_social',250);
+            $table->string('nombre',105 );
+            $table->string('razon_social',175);
             $table->timestamps();
-
         });
     }
 

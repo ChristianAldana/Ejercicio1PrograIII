@@ -13,19 +13,20 @@ class CreateCamionTable extends Migration
      */
     public function up()
     {
-        Schema::create('camion', function (Blueprint $table) {
+        Schema::create('camiones', function (Blueprint $table) {
             $table->id();
-            $table-> string('placa_camion', 75);
-            $table-> string(' marca', 75);
-            $table-> string('color', 75);
-            $table-> string('modelo', 75);
-            $table-> string('capacidad_toneladas', 75);
-            $table-> string('transporte_codigo', 75);
-
+            $table-> string('placa_camion',6);
+            $table->string('marca',25);
+            $table->string('color',25);
+            $table->string('model');
+            $table->integer('capacidad_toneladas');
+            $table->unsignedBigInteger('transportes_id')->nullable();
+            $table->foreign('transportes_id')->references('id')->on('transportes')->onDelete('set null');
 
             $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.

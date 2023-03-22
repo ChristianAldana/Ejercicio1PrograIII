@@ -9,4 +9,9 @@ class transporte extends Model
 {
     public $table='transporte';
     use HasFactory;
+
+    public function camiones(){
+        return $this->hasMany('App\Models\camion');
 }
+}
+
